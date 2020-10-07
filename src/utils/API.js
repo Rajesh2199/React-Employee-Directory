@@ -7,11 +7,12 @@ export default {
       .get("https://https://randomuser.me/")
       .then(res => {
         const users = res.data;
+        console.log(data)
         return users.map(user => {
           return {
-            login: user.login,
-            image: user.avatar_url,
-            profileUrl: user.html_url
+            login: user.name,
+            image: user.image,
+            
           };
         });
       });
