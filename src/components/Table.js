@@ -3,6 +3,7 @@ import Api from '../utils/API'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from "jquery"
 
+// Enable search functionality in the table. 
 $(document).ready(function(){
     $("#tableSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
@@ -13,6 +14,9 @@ $(document).ready(function(){
   });
 
 
+
+  // Custome table to add the user details.
+  
 class Table extends Component {
     render (props){
         return (
