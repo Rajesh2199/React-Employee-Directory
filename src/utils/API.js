@@ -4,14 +4,14 @@ import axios from "axios";
 export default {
   fetchUsers: function() {
     return axios
-      .get("https://https://randomuser.me/")
+      .get("https://randomuser.me/api")
       .then(res => {
         const users = res.data;
-        console.log(data)
+        console.log("hello")
         return users.map(user => {
           return {
-            login: user.name,
-            image: user.image,
+            username: users.name,
+            image: users.image,
             
           };
         });
