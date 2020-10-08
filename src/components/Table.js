@@ -1,8 +1,20 @@
 import React, {Component } from 'react';
+import Api from '../utils/API'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from "jquery"
+
+$(document).ready(function(){
+    $("#tableSearch").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
 
 class Table extends Component {
-    render (){
+    render (props){
         return (
             
             <div>
@@ -11,16 +23,17 @@ class Table extends Component {
                                          
 
                     <table class="table table-bordered table-striped">
-                              <thead>
+                            <thead>
                             <tr>
+                                
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Email</th>
                             </tr>
-                                 </thead>
+                            </thead>
                         <tbody id="myTable">
                             <tr>
-                                <td>John</td>
+                                <td><Api/></td>
                                 <td>Doe</td>
                                 <td>john@example.com</td>
                                 </tr>

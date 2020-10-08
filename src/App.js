@@ -12,7 +12,6 @@ function App()  {
     return (
        <div>
          <Welcome/>
-         <Search/>
          <Table/>
          <Api/>
       </div>
