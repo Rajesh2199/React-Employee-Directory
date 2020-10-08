@@ -9,6 +9,7 @@ class App extends Component {
         super(props)
         this.state = {
           items:[],
+          loading:false
         }
 
       }
@@ -16,21 +17,38 @@ class App extends Component {
 
 
 componentDidMount() {
-  fetch('https://randomuser.me/results=10')
+  fetch('https://randomuser.me/api/?results=5')
   .then((response)=> response.json())
   .then((response)=> {
     this.setState({
       items:response.results,
       loading:true
     })
+  })
   }
 
 
-  this.render (){
+  render(){
+
+    var {items, loading} = this.state
+    if(!loading){
+      return (
+        <div>loading</div>
+      )
+    }
+
+    else {
     return (
-      <div> Hello </div>
+       <div className ="container">
+          {items.map(items => (
+        <img src ={items.picture.medium} alt = {items.name.first}/>
+          ))}
+       </div>
+        
+        
     )
   }
+}
 }
 
 
