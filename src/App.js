@@ -5,15 +5,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
-      state= {
-        items : []
+      constructor(props){
+        super(props)
+        this.state = {
+          items:[],
+        }
+
       }
 
 
 
 componentDidMount() {
   fetch('https://randomuser.me/results=10')
-  .then()
+  .then((response)=> response.json())
+  .then((response)=> {
+    this.setState({
+      items:response.results,
+      loading:true
+    })
+  }
+
+
+  this.render (){
+    return (
+      <div> Hello </div>
+    )
+  }
 }
 
 
