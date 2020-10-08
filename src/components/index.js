@@ -6,8 +6,8 @@ class Welcome extends Component {
         return (
             
             <div>
-                <div className = "jumbotron bg-info text-white"> Welcome to the User Directory.</div>
-                     <h1 className ="lead">Here is the list of the current employees.</h1>
+                <h1 className = "jumbotron bg-info text-white" style = {{textAlign : "center"}}> Welcome to the User Directory.</h1>
+                <h2 style = {{textAlign : "center"}} >Here is the list of the current employees.</h2>
                
             </div>
         )
