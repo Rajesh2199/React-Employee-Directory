@@ -1,5 +1,6 @@
 import React, {Component } from 'react';
 import './App.css';
+import Welcome from '../src/components/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -29,20 +30,26 @@ componentDidMount() {
 
 
   render(){
-
+    
     var {items, loading} = this.state
     if(!loading){
       return (
-        <div>loading</div>
+        
+        <div>Users are loading..........</div>
       )
     }
 
     else {
     return (
-       <div className ="container">
+       <div className = "App">
+         <Welcome/>
           {items.map(items => (
-        <img src ={items.picture.medium} alt = {items.name.first}/>
-          ))}
+        <img src ={items.picture.medium} alt = "Name"/>
+        //<h3>{items.name.first}</h3>
+      ))}
+      
+      
+        
        </div>
         
         
@@ -51,32 +58,5 @@ componentDidMount() {
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-// function App() {
-//   return (
-//     <main className="page bg-blue" id="user">
-//         <div className="container">
-//           <div className="row">
-//             <div className="col-md-12 bg-blue">
-//               <div className="container">
-//                 <div>AddUser </div>
-//                 <div>SearchUser </div>
-//                 <div> ListUsers</div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </main>
-//   );
-// }
 
 export default App;
