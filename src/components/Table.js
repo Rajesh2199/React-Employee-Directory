@@ -1,9 +1,10 @@
 import React, {Component } from 'react';
 import Api from '../utils/API'
+import TableRow from '../components/TableRow'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from "jquery"
 
-// Enable search functionality in the table. 
+// Enable user-search functionality in the table. 
 $(document).ready(function(){
     $("#tableSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
@@ -14,19 +15,51 @@ $(document).ready(function(){
   });
 
 
+  
+
+var userData =[];
 
   // Custome table to add the user details.
-  
+
 class Table extends Component {
-    render (props){
+    data (){
+     return Api.fetchUsers()
+    }
+
+        constructor(props){
+        super(props)
+        this.state = {
+          items:[],
+          loading:false
+        }
+           
+      }
+componentDidMount (){
+    this.data()
+    .then (
+        users => {
+            this.setState({
+                items:users,
+                 loading:true
+        })
+    })
+
+}
+
+    render (){
+   
+
+        if (this.state.items.length === 0 ){
+            return null;
+        }
         return (
             
             <div>
-                <div class="container">
-                    <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Type something to search list items"></input>
+                <div className="container">
+                    <input className="form-control mb-4" id="tableSearch" type="text" placeholder="Type something to search list items"></input>
                                          
 
-                    <table class="table table-bordered table-striped">
+                    <table className="table table-bordered table-striped">
                             <thead>
                             <tr>
                                 
@@ -36,11 +69,7 @@ class Table extends Component {
                             </tr>
                             </thead>
                         <tbody id="myTable">
-                            <tr>
-                                <td><Api/></td>
-                                <td>Doe</td>
-                                <td>john@example.com</td>
-                                </tr>
+                            <TableRow firstname={this.state.items[0].loginFirst} lastname = {this.state.items[0].loginLast} email = {this.state.items[0].email}/>
                             <tr>
                                 <td>Mary</td>
                                 <td>Moe</td>

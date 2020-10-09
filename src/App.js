@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React from 'react';
 import './App.css';
 import Welcome from '../src/components/index';
 import Search from '../src/components/Search';
@@ -13,7 +13,7 @@ function App()  {
        <div>
          <Welcome/>
          <Table/>
-         <Api/>
+        
       </div>
     );
 }
