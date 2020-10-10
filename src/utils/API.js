@@ -13,7 +13,7 @@ export default {
           return {
             loginFirst: user.name.first,
             loginLast:user.name.last,
-            image: user.picture.medium,
+            image: user.picture.thumbnail,
             email: user.email,
           };
         });

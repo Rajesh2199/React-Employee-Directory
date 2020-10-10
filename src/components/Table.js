@@ -62,27 +62,28 @@ componentDidMount (){
                     <table className="table table-bordered table-striped">
                             <thead>
                             <tr>
-                               
+                                
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Email</th>
+                                <th>Picture</th>
                                 
                             </tr>
                             </thead>
                         <tbody id="myTable">
-                            <TableRow firstname={this.state.items[0].loginFirst} lastname = {this.state.items[0].loginLast} email = {this.state.items[0].email}/>
+                            <TableRow firstname={this.state.items[0].loginFirst} lastname = {this.state.items[0].loginLast} email = {this.state.items[0].email} picture = {this.state.items[0].image}/>
                           
-                            <TableRow firstname = {this.state.items[1].loginFirst} lastname = {this.state.items[1].loginLast} email = {this.state.items[1].email}/>
+                            <TableRow firstname = {this.state.items[1].loginFirst} lastname = {this.state.items[1].loginLast} email = {this.state.items[1].email} picture = {this.state.items[1].image}/>
                             
-                            <TableRow firstname = {this.state.items[2].loginFirst} lastname = {this.state.items[2].loginLast} email = {this.state.items[2].email}/>
+                            <TableRow firstname = {this.state.items[2].loginFirst} lastname = {this.state.items[2].loginLast} email = {this.state.items[2].email} picture = {this.state.items[2].image}/>
             
-                            <TableRow firstname = {this.state.items[3].loginFirst} lastname = {this.state.items[3].loginLast} email = {this.state.items[3].email}/>
+                            <TableRow firstname = {this.state.items[3].loginFirst} lastname = {this.state.items[3].loginLast} email = {this.state.items[3].email} picture = {this.state.items[3].image}/>
 
-                            <TableRow firstname = {this.state.items[4].loginFirst} lastname = {this.state.items[4].loginLast} email = {this.state.items[4].email}/>
+                            <TableRow firstname = {this.state.items[4].loginFirst} lastname = {this.state.items[4].loginLast} email = {this.state.items[4].email} picture = {this.state.items[4].image}/>
 
-                            <TableRow firstname = {this.state.items[5].loginFirst} lastname = {this.state.items[5].loginLast} email = {this.state.items[5].email}/>
+                            <TableRow firstname = {this.state.items[5].loginFirst} lastname = {this.state.items[5].loginLast} email = {this.state.items[5].email} picture = {this.state.items[5].image}/>
 
-                            <TableRow firstname = {this.state.items[6].loginFirst} lastname = {this.state.items[6].loginLast} email = {this.state.items[6].email}/>
+                            <TableRow firstname = {this.state.items[6].loginFirst} lastname = {this.state.items[6].loginLast} email = {this.state.items[6].email} picture = {this.state.items[6].image}/>
                             
                         </tbody>
                     </table>

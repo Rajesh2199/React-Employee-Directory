@@ -9,7 +9,10 @@ function TableRow(props) {
         <td>{props.firstname}</td>
         <td>{props.lastname}</td>
         <td>{props.email}</td>
-    </tr>
+        <td>
+        <img src = {props.picture} alt ="pic" ></img>
+        </td>
+         </tr>
     
     )
 }
