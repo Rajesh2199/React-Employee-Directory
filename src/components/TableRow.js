@@ -12,7 +12,7 @@ function TableRow(props) {
         <td>
         <img src = {props.picture} alt ="pic" ></img>
         </td>
-         </tr>
+    </tr>
     
     )
 }

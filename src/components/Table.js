@@ -6,9 +6,9 @@ import $ from "jquery"
 
 // Enable user-search functionality in the table. 
 $(document).ready(function(){
-    $("#mytable").on("keyup", function() {
+    $("#tableSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
+      $("#myTable").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
     });
