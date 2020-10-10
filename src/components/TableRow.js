@@ -10,6 +10,7 @@ function TableRow(props) {
         <td>{props.lastname}</td>
         <td>{props.email}</td>
     </tr>
+    
     )
 }
 
