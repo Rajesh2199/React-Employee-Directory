@@ -5,7 +5,7 @@ import axios from "axios";
 export default {
   fetchUsers: function() {
     return axios
-      .get("https://randomuser.me/api/?results=10")
+      .get("https://randomuser.me/api/?results=30")
       .then(res => {
         console.log(res)
         const users = res.data.results;
